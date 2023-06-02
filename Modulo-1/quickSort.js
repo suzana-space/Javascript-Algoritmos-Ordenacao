@@ -39,4 +39,3 @@ function partition(array, esquerda, direita){
 }
 
 console.log(QuickSort(precos, 0, precos.length - 1))
-
