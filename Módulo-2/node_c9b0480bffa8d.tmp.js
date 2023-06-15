@@ -1,5 +1,3 @@
-//MergeSort - Dividir para conquistar
-
 import CursosTi from './CursosTi.js';
 import LivrosProg from './LivrosProg.js';
 
@@ -27,7 +25,7 @@ function ordena(parte1, parte2){
             result.push(produtoAtualPart1)
             indexAtualPart1++
         }
-        else{
+        if(produtoAtualPart2.preco < produtoAtualPart1.preco){
             result.push(produtoAtualPart2)
             indexAtualPart2++
         }   
@@ -35,17 +33,6 @@ function ordena(parte1, parte2){
     return result.concat(indexAtualPart1 < parte1.length? parte1.slice(indexAtualPart1): parte2.slice(indexAtualPart2))
 }
 
-console.log(MergeSort(LivrosProg))
+console.log(MergeSort(CursosTi))
 
-//retorna:
-// [
-//     { nome: 'Basic', preco: 12 },
-//     { nome: 'Elixir', preco: 25 },
-//     { nome: 'PHP', preco: 30 },
-//     { nome: 'Ruby', preco: 32 },
-//     { nome: 'Lua', preco: 45 },
-//     { nome: 'Javascript', preco: 50 },
-//     { nome: 'Pascal', preco: 56 },
-//     { nome: 'Java', preco: 60 },
-//     { nome: 'Python', preco: 89 }
-// ]
+
