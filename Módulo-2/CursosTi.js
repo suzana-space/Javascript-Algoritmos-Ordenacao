@@ -1,4 +1,4 @@
-const CursosTi = [
+let CursosTi = [
     {nome: 'Ciencia da Computação', mensalidade: 1500},
     {nome: 'Sistemas da Informação', mensalidade: 2000},
     {nome: 'Engenharia de Software', mensalidade: 3400},
