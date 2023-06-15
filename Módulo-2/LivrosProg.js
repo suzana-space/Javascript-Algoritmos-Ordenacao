@@ -1,4 +1,4 @@
-const LivrosProg = [
+let LivrosProg = [
     {nome: 'PHP', preco: 30},
     {nome: 'Javascript', preco: 50},
     {nome: 'Java', preco: 60},
