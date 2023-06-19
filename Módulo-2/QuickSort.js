@@ -1,17 +1,5 @@
 import LivrosProg from './LivrosProg.js'
-
-function QuickSort(array){
-    if(array.length > 1){
-        let indexAtual = partition(array, esquerda, direita)
-            if(esquerda < indexAtual - 1){
-                QuickSort(array, esquerda, indexAtual)
-            }
-            if( indexAtual < direita){
-                QuickSort(array, indexAtual, direita)
-            }
-    }
-    return array
-}
+import CursosTi from './CursosTi.js'
 
 function partition(array, esquerda, direita){
     let pivo = array[Math.floor(array.length/2)]
@@ -19,10 +7,10 @@ function partition(array, esquerda, direita){
     let direitaAtual = direita
 
     while(esquerdaAtual <= direitaAtual){
-        while(array[esquerdaAtual].mensalidade < pivo.mensalidade){
+        while(array[esquerdaAtual].mensalidade < array[pivo].mensalidade){
             esquerdaAtual++
         }
-        while(array[direitaAtual].mensalidade < pivo.mensalidade){
+        while(array[direitaAtual].mensalidade < array[pivo].mensalidade){
             direitaAtual--
         }
 
@@ -35,7 +23,8 @@ function partition(array, esquerda, direita){
     return array
 }
 
-function menoresqPivo(array){
+
+function menoresqPivo(array, pivo){
     let menores = 0
 
     for(let atual = 0; atual < array.length; atual++){
@@ -51,5 +40,18 @@ function swap(array, de, para){
     [array[de], array[para]] = [array[para], array[de]]
 }
 
+function QuickSort(array, esquerda, direita){
+    if(array.length > 1){
+        let indexAtual = partition(array, esquerda, direita)
+            if(esquerda < indexAtual - 1){
+                QuickSort(array, esquerda, indexAtual)
+            }
+            if(indexAtual < direita){
+                QuickSort(array, indexAtual, direita)
+            }
+    }
+    return array
+}
 
-console.log(QuickSort(CursosTi, 0, CursosTi.length-1))
+console.log(QuickSort(CursosTi, 0, CursosTi.length - 1))
+
