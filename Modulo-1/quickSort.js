@@ -1,4 +1,7 @@
 //QuickSort é eficiente porém ultiliza muita memoória por conta da recursividade 
+
+const lista = require('./listaDeCompras.js')
+
 function troca(lista, analise, anterior){
     let itemAnalise = lista[analise]
     let itemAnterior = lista[anterior]
@@ -42,18 +45,15 @@ function partition(array, esquerda, direita){
     return atualEsquerda
 }
 
-const listaDeComprasComPreco = [
-    {produto: "manteiga",     preco: 19.50},
-    {produto: "alcatra",      preco: 40   },
-    {produto: "leite em pó",  preco: 23   },
-    {produto: "picanha",      preco: 252  },
-    {produto: "costelinha",   preco: 235  },
-    {produto: "cuscuz",       preco: 75   },
-    {produto: "banana prata", preco: 25   },
-    {produto: "manjericão",   preco: 34   },
-    {produto: "chá verde",    preco: 65.3 },
-    {produto: "chá mate",     preco: 15.99}, 
-] 
+function menorPreco (arrCompras, posInicial) {
+    let maisBarato = posInicial
 
+    for(let atual = posInicial; atual < arrCompras; atual++){
+        if(arrCompras[atual].preco < arrCompras[maisBarato].preco){
+            maisBarato = atual
+        }
+    }
+    return maisBarato
+}
 
-console.log(QuickSort(listaDeComprasComPreco, 0, listaDeComprasComPreco.length - 1))
+console.log(QuickSort(lista, 0, lista.length - 1))
