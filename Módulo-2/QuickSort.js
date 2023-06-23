@@ -1,4 +1,3 @@
-import LivrosProg from './LivrosProg.js'
 import CursosTi from './CursosTi.js'
 
 function partition(array, esquerda, direita){
@@ -40,6 +39,11 @@ function QuickSort(array, esquerda, direita){
     return array
 }
 
-console.log(QuickSort(CursosTi, 0, CursosTi.length - 1))
+//console.log(QuickSort(CursosTi, 0, CursosTi.length - 1))
+
+const result = QuickSort(CursosTi, 0, CursosTi.length - 1)
+//console.log(result)
+
+export default result
 
 
