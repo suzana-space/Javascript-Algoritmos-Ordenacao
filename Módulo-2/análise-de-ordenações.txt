@@ -1,0 +1,45 @@
+Métodos de Ordenação estudados: MergeSort, QuickSort
+
+1. MERGESORT 
+
+- Complexidade de tempo: O(n log n) -> 'n' representa o número de elementos na lista
+a ser ordenada . Isso torna o algoritmo eficiente para grandes conjuntos de dados. 
+
+- Estabilidade: Estável, significa que a ordem relativa dos elementos iguais é
+preservada após a ordenação. Se houver elementos repetidos na lista original, 
+eles manterão a mesma ordem relativa na lista ordenada. 
+
+- Uso de memória: Requer espaço adicional para armezenar sub-listas tmeporárias 
+durante o processo de combinação. Portanto, seu uso de memória é maior do que outros
+algoritmos de ordenação. A quantidade de memória mecessária é considerado 
+razoável na maioria dos casos. 
+
+
+2. QUICKSORT
+
+- Complexidade de tempo: O(n log n) sendo geralmente mais rápido em comparação 
+com outros algoritmos de ordenação. No pior caso quando o pivô escolhido resulta
+em partições desequilibradas, a Complexidade de tempo pode chegar a O(n^2).
+Esse é o caso quando a lista já está ordenada ou quase ordenada.
+ 
+- Estabilidade: Não é estável por padrão. Isso significa que a ordem relativa dos 
+elementos iguais pode não ser preservada após a ordenação. No entanto, é possível
+modificar o quicksort para torná-lo estável, embora isso possa aumentar a 
+complexidade de implementação e o uso de memória. 
+
+- Uso de memória: É um algoritmo de oprdenação in-place, que significa que a 
+ordenação é realizada diretamente na lista original sem a necessidade de espaço
+adicional. Isso torna eficiente em temros de uso de memória, especialmente em 
+comparação com o MergeSort
+
+RESUMINDO: 
+
+- O MergeSort e o QuickSort são dois algoritmos eficientes de ordenação. O MergeSort
+possui uma complexidade de tempo garantida de O(n log n), é estável, mas Requer
+espaço adicional de memória. O QuickSort tem uma complexidade média de tempo 
+de O(n log n) mas pode atingir O(n^2) no pior caso. Ele não é estável, mas usa 
+espaço mínimo de memória. A escolha entre eles depende das características específicas
+de cada problema, como a necessidade de estabilidade e o uso de memória disponível. 
+
+
+
