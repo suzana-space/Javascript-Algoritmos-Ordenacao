@@ -41,9 +41,9 @@ function QuickSort(array, esquerda, direita){
 
 //console.log(QuickSort(CursosTi, 0, CursosTi.length - 1))
 
-const result = QuickSort(CursosTi, 0, CursosTi.length - 1)
+const listaCursosOrdenada = QuickSort(CursosTi, 0, CursosTi.length - 1)
 //console.log(result)
 
-export default result
+export default listaCursosOrdenada
 
 

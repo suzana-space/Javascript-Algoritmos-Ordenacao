@@ -1,12 +1,14 @@
-import result from './QuickSort.js'
+import listaCursosOrdenada from './QuickSort.js'
 
-const buscaBinaria = (array, esquerda, direita, valor) => {
-    if(direita >= esquerda){
-        const meio = parseFloat( essquerda + (direita+esquerda)/2)
-        if(array[meio] == valor) {
-             return valor
-        }
-    }
+const mensalidadesOrdenadas = listaCursosOrdenada.map(curso => { //novo array com os valores de mensalidades já ordenado
+    return {mensalidade: curso.mensalidade}
+})
+console.log(mensalidadesOrdenadas)   
+
+const buscaBinaria = (array, esquerda, direita, valorBuscado) => {
+  const meio = Math.floor((esquerda+direita)/2)
+  const atual = array[meio]
 }
 
-console.log(buscaBinaria(result, ))
+
+
