@@ -42,4 +42,28 @@ espaço mínimo de memória. A escolha entre eles depende das características e
 de cada problema, como a necessidade de estabilidade e o uso de memória disponível. 
 
 
+NOTAÇÃO BIG O - Classificação de algoritmos com base em tempo e memória:
 
+Algoritmo	    Estrutura	Complexidade de Tempo (Melhor Caso)	Complexidade de Tempo (Pior Caso)	Complexidade de Espaço (Pior Caso)
+Quick Sort	    Array	    O(n log(n))	                        O(n^2)	                            O(n log(n))
+Merge Sort	    Array	    O(n log(n))	                        O(n log(n))                     	O(n)
+Heap Sort	    Array	    O(n log(n))	                        O(n log(n))	                        O(1)
+Smooth Sort	    Array	    O(n)	                            O(n log(n))	                        O(1)
+Bubble Sort	    Array	    O(n)	                            O(n^2)	                            O(1)
+Insertion Sort	Array	    O(n)	                            O(n^2)	                            O(1)
+Selection Sort	Array	    O(n^2)	                            O(n^2)	                            O(1)
+
+
+- O(1): Notação de big O que representa um algoritmo que é executado 
+em tempo constante. 
+
+- O(n): Algoritmo que é executado em tempo linear, ou seja, as execuções
+aumentam de acordo com as entradas - como a busca linear. 
+
+- O(n log (n)): Representa um algoritmo que reduz pela metade uma lista a cada
+vez que é executado - como o merge e quick
+
+- O(n^2): Representa um algoritmo com o tempo quadrático que por sua vez, significa
+que assim que o número de elementos na entrada aumenta, as execuções aumentam 
+quadraticamente. Por isso, deve-se evitar códigos com essa notação Big O, pois
+aumenta significativamente a cada entrada - como o selection e insertion sort
